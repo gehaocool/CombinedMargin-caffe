@@ -1,0 +1,45 @@
+// add the definition of CombinedMarginLayer to your $CAFFE_ROOT/src/caffe/proto/caffe.proto
+// in `message LayerParameter { ... }`
+// the number `151` may differ 
+
+optional CombinedMarginParameter combined_margin_param = 151;
+
+// and add this to your caffe.proto, such as the end of it
+message CombinedMarginParameter {
+    optional float m1 = 1 [default = 4];
+    optional float m2 = 2 [default = 0.5];
+    optional float m3 = 3 [default = 0.35];
+    optional bool transform_test = 4 [default = false];
+  }
+
+// And we need the NormalizeLayer to cooperate
+// in case your caffe didn't have one, add this the same way
+optional NormalizeParameter normalize_param = 148;
+
+message NormalizeParameter {
+    optional string normalize_type = 1 [default = "L2"];
+    optional bool fix_gradient = 2 [default = false];
+    optional bool bp_norm = 3 [default = false];
+  }
+
+// Last but not least, we need to normalize params in InnerProductLayer
+// so modify InnerProductParameter as below
+// note that a new param `normalize` is added
+
+message InnerProductParameter {
+    optional uint32 num_output = 1; // The number of outputs for the layer
+    optional bool bias_term = 2 [default = true]; // whether to have bias terms
+    optional FillerParameter weight_filler = 3; // The filler for the weight
+    optional FillerParameter bias_filler = 4; // The filler for the bias
+  
+    // The first axis to be lumped into a single inner product computation;
+    // all preceding axes are retained in the output.
+    // May be negative to index from the end (e.g., -1 for the last axis).
+    optional int32 axis = 5 [default = 1];
+    // Specify whether to transpose the weight matrix or not.
+    // If transpose == true, any operations will be performed on the transpose
+    // of the weight matrix. The weight matrix itself is not going to be transposed
+    // but rather the transfer flag of operations will be toggled accordingly.
+    optional bool transpose = 6 [default = false];
+    optional bool normalize = 7 [default = false];
+  }
