@@ -26,5 +26,3 @@ Combined Margin 的实验效果可以参照 insightface 相关的实验内容，
 4. 现在你可以在训练中使用 Combined Margin 了。这里有一个例子 [example.prototxt](example.prototxt)，这个例子是从 [AMSoftmax's prototxt](https://github.com/happynear/AMSoftmax/blob/master/prototxt/face_train_test.prototxt) 修改得来的。你也可以通过将 **LabelSpecificAddLayer** 修改成 **CombinedMarginLayer** 来使用 Combined Margin，请不要忘记修改该层的相关参数配置。
 
 有任何问题请开 issue，我会尽量回答。
-
-如果觉得本工程有用，请

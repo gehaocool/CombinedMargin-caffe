@@ -1,6 +1,6 @@
 # Combined Margin (caffe)
 
-[Chinese version](README_zh.md)
+[中文版本README](README_zh.md)
 
 ## Introduction
 
