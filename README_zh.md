@@ -26,3 +26,7 @@ Combined Margin 的实验效果可以参照 insightface 相关的实验内容，
 4. 现在你可以在训练中使用 Combined Margin 了。这里有一个例子 [example.prototxt](example.prototxt)，这个例子是从 [AMSoftmax's prototxt](https://github.com/happynear/AMSoftmax/blob/master/prototxt/face_train_test.prototxt) 修改得来的。你也可以通过将 **LabelSpecificAddLayer** 修改成 **CombinedMarginLayer** 来使用 Combined Margin，请不要忘记修改该层的相关参数配置。
 
 有任何问题请开 issue，我会尽量回答。
+
+### update 2018-11-11
+
+[这里](https://pan.baidu.com/s/1bqClfIvSIcjFAWyExcvI1w)是一个 ResNet-36 模型 (password: pzx2), 训练数据是 Deepglint 提供的 ms-celeb-1m 和 asian-celeb。这个模型在 LFW 上可以达到 99.75%。在 [BLUFR](http://www.cbsr.ia.ac.cn/users/scliao/projects/blufr/)上达到 99.69% VR@FAR0.1%, 99.53%	@FAR0.01%, 99.42% Top1@FAR1%。暂时没有做其他测试。
