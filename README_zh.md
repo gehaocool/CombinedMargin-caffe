@@ -2,6 +2,12 @@
 
 [English version](README.md)
 
+- [Combined Margin (caffe)](#combined-margin-caffe)
+  - [介绍](#%E4%BB%8B%E7%BB%8D)
+  - [安装](#%E5%AE%89%E8%A3%85)
+  - [update 2018-11-11 放出一个Resnet-36模型](#update-2018-11-11-%E6%94%BE%E5%87%BA%E4%B8%80%E4%B8%AAresnet-36%E6%A8%A1%E5%9E%8B)
+  - [update 2018-12-10 放出训练log和solver等](#update-2018-12-10-%E6%94%BE%E5%87%BA%E8%AE%AD%E7%BB%83log%E5%92%8Csolver%E7%AD%89)
+
 ## 介绍
 
 这是 Combined Margin Loss 的一个 caffe 实现版本。
@@ -27,6 +33,10 @@ Combined Margin 的实验效果可以参照 insightface 相关的实验内容，
 
 有任何问题请开 issue，我会尽量回答。
 
-### update 2018-11-11
+## update 2018-11-11 放出一个Resnet-36模型
 
 [这里](https://pan.baidu.com/s/1bqClfIvSIcjFAWyExcvI1w)是一个 ResNet-36 模型 (password: pzx2), 训练数据是 Deepglint 提供的 ms-celeb-1m 和 asian-celeb。这个模型在 LFW 上可以达到 99.75%。在 [BLUFR](http://www.cbsr.ia.ac.cn/users/scliao/projects/blufr/)上达到 99.69% VR@FAR0.1%, 99.53%	@FAR0.01%, 99.42% Top1@FAR1%。暂时没有做其他测试。
+
+## update 2018-12-10 放出训练log和solver等
+
+res36-training-config文件夹中是上述ResNet-36模型的训练log, 训练所用的solver.prototxt和train.prototxt(password: y672)。所用训练数据是 [Trillionpairs by Deepglint](http://trillionpairs.deepglint.com/data)。所有人脸都对齐到112x96。这一数据集提供了5点人脸特征点的信息，因此只需直接将人脸抠出来，而不需要再做人脸检测和特征点定位。

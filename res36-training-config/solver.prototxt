@@ -1,0 +1,20 @@
+net: "code/CombinedMargin_spherenet36_E_model.prototxt"
+
+
+base_lr: 0.1
+lr_policy: "multistep"
+gamma: 0.1
+
+stepvalue: 170000 # 13 epochs
+stepvalue: 250000 # 18 epochs
+stepvalue: 320000 # 21 epochs
+max_iter: 3000000 # max 230 epochs
+
+display: 100
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 10000
+snapshot_prefix: "result/CombinedMargin_spherenet36_E"
+
+solver_mode: GPU
+iter_size: 2

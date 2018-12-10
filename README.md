@@ -2,6 +2,12 @@
 
 [中文版本README](README_zh.md)
 
+- [Combined Margin (caffe)](#combined-margin-caffe)
+  - [Introduction](#introduction)
+  - [Installation](#installation)
+  - [update 2018-11-11 a resnet-36 model](#update-2018-11-11-a-resnet-36-model)
+  - [update 2018-12-10 add training log](#update-2018-12-10-add-training-log)
+
 ## Introduction
 
 In this repo, a caffe implementation of Combined Margin is introduced.
@@ -30,7 +36,11 @@ If you have any question, feel free to open an issue.
 
 Anyone use the code, please site the original papers
 
-### update 2018-11-11
+## update 2018-11-11 a resnet-36 model
 
 [Here](https://pan.baidu.com/s/1bqClfIvSIcjFAWyExcvI1w)'s one ResNet-36 model (password: pzx2), trained on ms-celeb-1m and asian-celeb provided by Deepglint. This model can get 99.75% on LFW. And on [BLUFR](http://www.cbsr.ia.ac.cn/users/scliao/projects/blufr/), it gets 99.69% VR@FAR0.1%, 99.53%	@FAR0.01%, 99.42% Top1@FAR1%
 . I didn't do other test.
+
+## update 2018-12-10 add training log
+
+In *res36-training-config* folder is the training log, solver.prototxt and train.prototxt of ResNet-36 combined margin loss model training(password: y672). The training data is [Trillionpairs by Deepglint](http://trillionpairs.deepglint.com/data). All faces are aligned to 112x96. This dataset provides 5-landmark information, so we don't need to do the detection and landmarks location.
