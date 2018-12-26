@@ -38,7 +38,7 @@ namespace caffe {
       Dtype diff_gt = m1 * powf(1 - powf(cos_theta, 2), -0.5) * sin(m1_mul_theta_plus_m2);
       diff_gt = diff_gt > 2 ? 2 : diff_gt;
       diff_gt = diff_gt < 0 ? 0 : diff_gt;
-      bottom_diff[index * dim + gt] *= diff  _gt;
+      bottom_diff[index * dim + gt] *= diff_gt;
     }
   }
 
