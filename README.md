@@ -38,7 +38,7 @@ Anyone use the code, please site the original papers
 
 ## update 2018-11-11 a resnet-36 model
 
-[Here](https://pan.baidu.com/s/1bqClfIvSIcjFAWyExcvI1w)'s one ResNet-36 model (password: pzx2), trained on ms-celeb-1m and asian-celeb provided by Deepglint. This model can get 99.75% on LFW. And on [BLUFR](http://www.cbsr.ia.ac.cn/users/scliao/projects/blufr/), it gets 99.69% VR@FAR0.1%, 99.53%	@FAR0.01%, 99.42% Top1@FAR1%
+[Here](https://pan.baidu.com/s/18kCU-6rcyetI9UBHCJT_XQ)'s one ResNet-36 model (password: 6sgx), trained on ms-celeb-1m and asian-celeb provided by Deepglint. This model can get 99.75% on LFW. And on [BLUFR](http://www.cbsr.ia.ac.cn/users/scliao/projects/blufr/), it gets 99.69% VR@FAR0.1%, 99.53%	@FAR0.01%, 99.42% Top1@FAR1%
 . I didn't do other test.
 
 ## update 2018-12-10 add training log
