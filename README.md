@@ -44,3 +44,6 @@ Anyone use the code, please site the original papers
 ## update 2018-12-10 add training log
 
 In *res36-training-config* folder is the training log, solver.prototxt and train.prototxt of ResNet-36 combined margin loss model training(password: y672). The training data is [Trillionpairs by Deepglint](http://trillionpairs.deepglint.com/data). All faces are aligned to 112x96. This dataset provides 5-landmark information, so we don't need to do the detection and landmarks location.
+
+## update 2019-06-19 upload resnet-36 model to Google Drive
+[Google Drive URL](https://drive.google.com/open?id=1iqK4sJNzGyfo7Jrf-OyAfOKsBIFvD2Wl)
